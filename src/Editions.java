@@ -13,7 +13,7 @@ public abstract class Editions extends Library implements  Detailable {
             setAvable(false);
         }
         else{
-            System.out.println("Еdition not available");
+            System.out.println("Edition not available");
         }
     }
     public void returnToLibrary(){

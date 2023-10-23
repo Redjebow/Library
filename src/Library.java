@@ -1,42 +1,31 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Library {
     private String nameLibrary;
     private String adressLibrary;
     private String workingTime;
-    private ArrayList<Editions> editionList;
-    public void addEditionList(Editions edition){
-        editionList.add(edition);
-    }
-    public void printList(){
-        for(Editions edition: editionList){
-            System.out.println(edition.toString());
-        }
-    }
-    public void search(Editions editions){
-        for(Editions editions1:editionList) {
-            if (editions.equals(editions1)&& editions.avable) {
-                editions.setAvable(false);
-                System.out.println("Editions " +editions.toString()+ " is found and marked as busy.");
-                return;
-            }
-        }
-        System.out.println("Edition is not found");
-
-            }
-
-
+    private List<Editions> editionList;
+    private AddEdition addEdition;
+    private Print printEditions;
+    private Search searchEditions;
     public Library(String nameLibrary, String adressLibrary, String workingTime) {
         this.nameLibrary = nameLibrary;
         this.adressLibrary = adressLibrary;
         this.workingTime = workingTime;
         this.editionList=new ArrayList<>();
+        this.addEdition =new AddEdition(editionList);
+        this.printEditions = new Print(editionList);
+        this.searchEditions = new Search(editionList);
     }
     public Library() {
         this.nameLibrary = "Hristo Botev";
         this.adressLibrary = "Razgrad, bul. Aprilsko Vastanie";
         this.workingTime = "09:00 - 18:00";
         this.editionList=new ArrayList<>();
+        this.addEdition =new AddEdition(editionList);
+        this.printEditions = new Print(editionList);
+        this.searchEditions = new Search(editionList);
     }
 
 
@@ -63,5 +52,20 @@ public class Library {
     public void setWorkingTime(String workingTime) {
         this.workingTime = workingTime;
     }
+
+    public void addEditionsList(Editions edition){
+        addEdition.addEditionList(edition);
+
+    }
+    public void printList(){
+        printEditions.printList(editionList);
+    }
+    public void searchEditions(Editions editions){
+        searchEditions.search(editions);
+
+    }
+
+
+
 
 }
