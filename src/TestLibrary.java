@@ -1,6 +1,6 @@
 public class TestLibrary {
     public static void main(String[] args) {
-        Editions book1 = new Book( "Book name 1", "Book author 1", 2000);
+        Editions book1 = new Book( "Book name 1", "Book author 1", 2000,100);
         Editions book2 = new Book();
         Editions np1 = new Newspaper();
         Editions np2 = new Newspaper("NPName", "12.12.12");
