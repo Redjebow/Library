@@ -52,6 +52,7 @@ public class Book extends Editions implements Detailable{
                 "Book name: '" + bookName + '\'' +
                 ", Author: '" + author + '\'' +
                 ", Year issue: " + yearIssue +
+                ", Number Of Pages: "+yearIssue+
                 '}';
     }
 }
