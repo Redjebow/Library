@@ -2,24 +2,29 @@ import java.security.PrivateKey;
 
 public class Book extends Editions implements Detailable{
     private String bookName;
+    private int pageNumber;
     private String bookAuthor;
+    private int pageNumber;
     private int yearIssue;
-    private int numberOfPages;
 
-    public Book(String bookName, String author, int yearIssue, int numberOfPage) {
+
+    public Book(String bookName, String bookAuthor int pageNumber, int yearIssue) {
+
+    public Book(String bookName, int pageNumber, int yearIssue) {
         this.bookName = bookName;
-        this.bookAuthor = author;
+        this.bookAuthor = bookAuthor;
+        this.pageNumber = pageNumber;
         this.yearIssue = yearIssue;
-        this.numberOfPages = numberOfPage;
         super.avable=true;
     }
 
     public Book() {
         this.bookName = "Unknown";
         this.bookAuthor = "Unknown";
+        this.pageNumber = 10;
+        this.pageNumber = 10;
         this.yearIssue = 1990;
         super.avable=true;
-        this.numberOfPages = 100;
     }
 
     public String getBookName() {
