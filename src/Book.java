@@ -14,7 +14,6 @@ public class Book extends Editions implements Detailable{
         this.bookName = bookName;
         this.bookAuthor = bookAuthor;
         this.pageNumber = pageNumber;
-        this.pageNumber = pageNumber;
         this.yearIssue = yearIssue;
         super.avable=true;
     }
