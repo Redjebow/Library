@@ -7,12 +7,11 @@ public class Book extends Editions implements Detailable{
     private int yearIssue;
 
 
-    public Book(String bookName, int pageNumber, int yearIssue) {
+    public Book(String bookName, String bookAuthor int pageNumber, int yearIssue) {
         this.bookName = bookName;
-        this.bookAuthor = author;
+        this.bookAuthor = bookAuthor;
         this.pageNumber = pageNumber;
         this.yearIssue = yearIssue;
-        this.numberOfPages = numberOfPage;
         super.avable=true;
     }
 
@@ -22,7 +21,6 @@ public class Book extends Editions implements Detailable{
         this.pageNumber = 10;
         this.yearIssue = 1990;
         super.avable=true;
-        this.numberOfPages = 100;
     }
 
     public String getBookName() {
@@ -34,11 +32,11 @@ public class Book extends Editions implements Detailable{
     }
 
     public String getAuthor() {
-        return author;
+        return bookAuthor;
     }
 
     public void setAuthor(String author) {
-        this.author = author;
+        this.bookAuthor = author;
     }
 
     public int getYearIssue() {
