@@ -4,12 +4,16 @@ public class Book extends Editions implements Detailable{
     private String bookName;
     private int pageNumber;
     private String bookAuthor;
+    private int pageNumber;
     private int yearIssue;
 
 
     public Book(String bookName, String bookAuthor int pageNumber, int yearIssue) {
+
+    public Book(String bookName, int pageNumber, int yearIssue) {
         this.bookName = bookName;
         this.bookAuthor = bookAuthor;
+        this.pageNumber = pageNumber;
         this.pageNumber = pageNumber;
         this.yearIssue = yearIssue;
         super.avable=true;
@@ -18,6 +22,7 @@ public class Book extends Editions implements Detailable{
     public Book() {
         this.bookName = "Unknown";
         this.bookAuthor = "Unknown";
+        this.pageNumber = 10;
         this.pageNumber = 10;
         this.yearIssue = 1990;
         super.avable=true;
