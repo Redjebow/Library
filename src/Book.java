@@ -2,13 +2,13 @@ import java.security.PrivateKey;
 
 public class Book extends Editions implements Detailable{
     private String bookName;
-    private String author;
+    private String bookAuthor;
     private int yearIssue;
     private int numberOfPages;
 
     public Book(String bookName, String author, int yearIssue, int numberOfPage) {
         this.bookName = bookName;
-        this.author = author;
+        this.bookAuthor = author;
         this.yearIssue = yearIssue;
         this.numberOfPages = numberOfPage;
         super.avable=true;
@@ -16,7 +16,7 @@ public class Book extends Editions implements Detailable{
 
     public Book() {
         this.bookName = "Unknown";
-        this.author = "Unknown";
+        this.bookAuthor = "Unknown";
         this.yearIssue = 1990;
         super.avable=true;
         this.numberOfPages = 100;
@@ -31,11 +31,11 @@ public class Book extends Editions implements Detailable{
     }
 
     public String getAuthor() {
-        return author;
+        return bookAuthor;
     }
 
     public void setAuthor(String author) {
-        this.author = author;
+        this.bookAuthor = author;
     }
 
     public int getYearIssue() {
@@ -55,7 +55,7 @@ public class Book extends Editions implements Detailable{
     public String toString() {
         return "Book{" +
                 "Book name: '" + bookName + '\'' +
-                ", Author: '" + author + '\'' +
+                ", Author: '" + bookAuthor + '\'' +
                 ", Year issue: " + yearIssue +
                 ", Number Of Page: "+yearIssue+
                 '}';
